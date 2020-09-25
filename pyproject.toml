@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "hypermodern_python_example"
+version = "0.1.0"
+description = "Example package following along with the a Hypermodern Python Example. Showcasing modern development habits and tools to facilitate agile Python Development."
+authors = ["Ryan Skinner <rskinner593@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/rcskinner/hypermodern_python_example"
+repository = "https://github.com/rcskinner/hypermodern_python_example"
+keywords = ["hypermodern","DevOps"]
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0a5"]
+build-backend = "poetry.core.masonry.api"
