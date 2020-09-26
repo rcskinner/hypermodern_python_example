@@ -1,0 +1,3 @@
+[flake8]
+select = C,E,W,F
+max-complexity = 10
