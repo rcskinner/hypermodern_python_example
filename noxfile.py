@@ -18,7 +18,7 @@ def install_with_constraints(session, *args, **kwargs):
             f"--output={requirements.name}",
             external=True,
         )
-    session.install(f"--constraint={requirements.name}", *args, **kwargs)
+        session.install(f"--constraint={requirements.name}", *args, **kwargs)
 
 
 # Black session to modify the code to match standard guide
