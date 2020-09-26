@@ -15,11 +15,10 @@ def install_with_constraints(session, *args, **kwargs):
             "export",
             "--dev",
             "--format=requirements.txt",
-            f"--output={requirements.name}"
-            external=True
+            f"--output={requirements.name}",
+            external=True,
         )
     session.install(f"--constraint={requirements.name}", *args, **kwargs)
-
 
 
 # Black session to modify the code to match standard guide
@@ -28,7 +27,6 @@ def black(session):
     args = session.posargs or locations
     install_with_constraints(session, "black")
     session.run("black", *args)
-
 
 
 # Linter argument that checks for stylistic / complexity issues
@@ -45,6 +43,7 @@ def lint(session):
     )
     session.run("flake8", *args)
 
+
 # Nox session that runs the unit tests for the 3.8 version
 def tests(session):
     args = session.posargs or ["--cov", "-m", "not e2e"]
@@ -53,6 +52,7 @@ def tests(session):
         session, "coverage[toml]", "pytest", "pytest-cov", "pytest-mock"
     )
     session.run("pytest", *args)
+
 
 # Nox session that runs the safety/vulnerability checks
 @nox.session(python="3.8")
