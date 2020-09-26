@@ -1,4 +1,5 @@
-import pytest 
+import pytest
+
 
 @pytest.fixture
 def mock_requests_get(mocker):

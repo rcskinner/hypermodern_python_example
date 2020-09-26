@@ -1,4 +1,4 @@
-#src/hypermodern_python_example/console.py
+# src/hypermodern_python_example/console.py
 
 import textwrap
 import click
