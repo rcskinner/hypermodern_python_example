@@ -1,8 +1,8 @@
 # src/hypermodern_python_example/console.py
 
 import textwrap
+
 import click
-import requests
 
 from . import __version__, wikipedia
 
