@@ -48,8 +48,9 @@ def test_main_fails_on_request_error(runner, mock_requests_get):
     assert result.exit_code == 1
 
 
+@pytest.fixture
 def mock_wikipedia_random_page(mocker):
-    return mocker.patch("hypermodern_python.wikipedia.random_page")
+    return mocker.patch("hypermodern_python_example.wikipedia.random_page")
 
 
 def test_main_uses_specified_language(runner, mock_wikipedia_random_page):
